@@ -10,7 +10,7 @@ var grid = new ej.grids.Grid({
         { field: 'ShipCountry', headerText: 'Ship Country', width: 250 },
     ],
     actionBegin: function (args) {
-        if (args.requestType === 'filtering') {
+        if (args.requestType === 'filtering' && args.currentFilteringColumn === 'CustomerID') {
             args.cancel = true;
         }
     }
