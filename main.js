@@ -1,5 +1,4 @@
 ej.grids.Grid.Inject(ej.grids.Filter);
-var filter1=false;
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowFiltering: true,
@@ -12,9 +11,7 @@ var grid = new ej.grids.Grid({
     ],
     actionBegin: function (args) {
         if (args.requestType === 'filtering') {
-            // args.cancel = true;
-            args.cancel = filter1;
-            filter1 = true;
+            args.cancel = true;
         }
     }
 });
